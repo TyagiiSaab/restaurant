@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ember & Oak — Modern Independent Restaurant · Panipat</title>
+<meta name="description" content="Ember & Oak — seasonal, local cooking in Panipat. Good food. Good company. No rush." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◍</text></svg>">
+</head>
+<body>
+
+<!-- ============ NAVIGATION (component: nav) ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="wordmark" data-site="name">
+      <span class="wordmark-mark">◍</span>
+      <span class="wordmark-text">Ember <em>&</em> Oak</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:+911802654321" class="nav-phone" data-site="phone">+91 180 265 4321</a>
+      <a href="#reserve" class="btn btn-accent btn-sm">Reserve a Table</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#story">Our Story</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Visit Us</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <a href="#reserve" class="btn btn-accent btn-lg">Reserve a Table</a>
+    <p data-site="address">14 G.T. Road, Model Town, Panipat, Haryana 132103</p>
+    <p data-site="hoursShort">Open Today · 11AM — 11PM</p>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-meta reveal">
+          <span>Est. 2018</span><i>·</i>
+          <span>Panipat, India</span><i>·</i>
+          <span class="dot-live"><b></b> Open today · 11AM — 11PM</span>
+        </div>
+        <h1 class="reveal d1">Good food.<br>Good company.<br><em>No rush.</em></h1>
+        <p class="lede reveal d2">A small, independent kitchen cooking <em>seasonal</em> food over fire — made for long conversations, slow evenings, and coming back <em>together</em>.</p>
+        <div class="hero-ctas reveal d3">
+          <a href="#reserve" class="btn btn-accent btn-lg">Reserve a Table</a>
+          <a href="#menu" class="btn btn-ghost btn-lg">View Menu <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-info reveal d4">
+          <div>
+            <label>Find us</label>
+            <p>Model Town, G.T. Road,<br>Panipat</p>
+          </div>
+          <div>
+            <label>Hours</label>
+            <p>Tue – Sun<br>11AM — 11PM</p>
+          </div>
+          <div>
+            <label>Kitchen</label>
+            <p>Seasonal · Local<br>Wood-fired</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-media reveal-img">
+        <div class="hero-img-wrap">
+          <img data-site="heroImage" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400&auto=format&fit=crop" alt="Warm dining room at Ember and Oak" fetchpriority="high" />
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-row">
+            <span class="hero-card-label">Tonight at Ember</span>
+            <span class="hero-card-stars">★★★★★ <small>4.9 · 1,200+ reviews</small></span>
+          </div>
+          <p>“The kind of place you plan your week around. Quiet, warm, and the food stays with you.”</p>
+          <span class="hero-card-name">— Meera K., regular since 2019</span>
+        </div>
+        <span class="hero-stamp">E&O —<br>since ’18</span>
+      </div>
+    </div>
+    <div class="hero-ticker" aria-hidden="true">
+      <span>Wood-fired</span><i>✳</i><span>Seasonal menu</span><i>✳</i><span>Local farms</span><i>✳</i><span>Slow evenings</span><i>✳</i><span>Natural wines</span><i>✳</i><span>Wood-fired</span><i>✳</i><span>Seasonal menu</span><i>✳</i><span>Local farms</span><i>✳</i><span>Slow evenings</span><i>✳</i><span>Natural wines</span><i>✳</i>
+    </div>
+  </section>
+
+  <!-- ============ INTRO STRIP ============ -->
+  <section class="strip">
+    <div class="container strip-grid reveal">
+      <p class="strip-big">We cook what the season gives us — <em>fresh</em> from five family farms, finished over oak fire, served without fuss.</p>
+      <div class="strip-small">
+        <p>85 seats · One wood oven · No shortcuts. Lunch, dinner, and long Sunday afternoons.</p>
+        <a href="#story" class="text-link">Our philosophy →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED MENU (component: menu-item) ============ -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">The Menu · Winter</p>
+          <h2>Signatures worth<br>slowing down for.</h2>
+        </div>
+        <div class="sec-head-side">
+          <p>Five dishes our regulars refuse to let us take off the menu. The rest changes with the market.</p>
+          <button type="button" class="btn btn-dark" data-open="menuModal">View Full Menu</button>
+        </div>
+      </div>
+      <div class="menu-list" id="menuList"><!-- rendered by site.js --></div>
+      <div class="menu-foot reveal">
+        <p>Full menu changes monthly · Vegetarian & Jain options always · <a href="#reserve" class="text-link">Book for tonight →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="section story" id="story">
+    <div class="container story-grid">
+      <div class="story-media reveal">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop" alt="Candle-lit dining room with guests" loading="lazy" />
+        <div class="story-caption">
+          <span>Our room on a Friday — 7:40 PM</span>
+          <span>Photo · November</span>
+        </div>
+        <img class="story-inset" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop" alt="Chef finishing a dish in the kitchen" loading="lazy" />
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow reveal">Our Story</p>
+        <h2 class="reveal">Made with <em>intention.</em></h2>
+        <p class="reveal">Ember & Oak started in 2018 with a secondhand oven, eight tables, and a simple idea — cook <em>slow</em>, source <em>local</em>, and give Panipat a room that feels like someone's home.</p>
+        <p class="reveal">Chef Arjun Mehta works with five family farms within 60 km. Vegetables arrive each morning; bread is baked at noon; nothing is rushed. The room is low-lit and unhurried — built for birthdays, first dates, and Tuesday nights that turn into stories.</p>
+        <ul class="story-facts reveal">
+          <li><strong>5</strong><span>partner farms<br>within 60 km</span></li>
+          <li><strong>1</strong><span>oak-fired oven<br>burning daily</span></li>
+          <li><strong>7</strong><span>years of<br>slow evenings</span></li>
+        </ul>
+        <a class="btn btn-ghost-dark reveal" href="#story" data-open="storyModal" style="align-self:flex-start">Discover Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section exp">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">Why Ember & Oak</p>
+          <h2>Less fuss.<br>More feeling.</h2>
+        </div>
+        <p class="sec-head-side-p">Four things we hold onto, service after service.</p>
+      </div>
+      <div class="exp-grid">
+        <article class="reveal"><span class="exp-num">01</span><h3>Seasonal</h3><p>Ingredients chosen around the season — the menu turns when the farms do.</p><span class="exp-line"></span></article>
+        <article class="reveal d1"><span class="exp-num">02</span><h3>Local</h3><p>Strong ties to local producers. We know every farmer by first name.</p><span class="exp-line"></span></article>
+        <article class="reveal d2"><span class="exp-num">03</span><h3>Craft</h3><p>Thoughtful preparation instead of shortcuts. Bread, stocks, and fire — daily.</p><span class="exp-line"></span></article>
+        <article class="reveal d3"><span class="exp-num">04</span><h3>Atmosphere</h3><p>Designed for conversations, celebrations, and slow evenings. Stay a while.</p><span class="exp-line"></span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY (component: gallery) ============ -->
+  <section class="section gallery-sec" id="gallery">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">Moments</p>
+          <h2>An evening,<br>in fragments.</h2>
+        </div>
+        <div class="sec-head-side">
+          <p>Fire, plates, people — small details from the room. Follow along <a class="text-link" href="https://instagram.com" target="_blank" rel="noopener" data-site="instagram">@emberandoak</a>.</p>
+        </div>
+      </div>
+      <div class="masonry" id="galleryGrid"><!-- rendered by site.js --></div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS (component: testimonial) ============ -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <p class="eyebrow center reveal">Word of Mouth</p>
+      <h2 class="center reveal">Loved, loudly.</h2>
+      <p class="reviews-sub center reveal"><span class="g-badge">G</span> 4.9 on Google · 1,200+ reviews</p>
+      <div class="review-grid" id="reviewGrid"><!-- rendered by site.js --></div>
+    </div>
+  </section>
+
+  <!-- ============ RESERVATION ============ -->
+  <section class="section reserve" id="reserve">
+    <div class="container reserve-box">
+      <div class="reserve-copy">
+        <p class="eyebrow light reveal">Reservations</p>
+        <h2 class="reveal">Your table<br>is <em>waiting.</em></h2>
+        <p class="reveal">Tell us when — we'll keep the candles lit. For parties over 8, call us directly and we'll arrange the long table.</p>
+        <div class="reserve-contacts reveal">
+          <a href="tel:+911802654321" class="r-contact"><span>Call</span><strong data-site="phone">+91 180 265 4321</strong></a>
+          <a href="https://wa.me/911802654321" target="_blank" rel="noopener" class="r-contact"><span>WhatsApp</span><strong>Chat with us →</strong></a>
+          <a href="https://www.google.com/maps?q=G.T.+Road+Model+Town+Panipat" target="_blank" rel="noopener" class="r-contact"><span>Directions</span><strong>Get directions →</strong></a>
+        </div>
+      </div>
+      <form class="reserve-form reveal" id="reserveForm" novalidate>
+        <h3>Book a table</h3>
+        <div class="form-row">
+          <div class="field"><label for="fDate">Date</label><input type="date" id="fDate" required /></div>
+          <div class="field"><label for="fTime">Time</label>
+            <select id="fTime" required>
+              <option value="">Select</option>
+              <option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option>
+              <option>6:00 PM</option><option>7:00 PM</option><option>7:30 PM</option>
+              <option>8:00 PM</option><option>9:00 PM</option><option>9:30 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="fGuests">Guests</label>
+            <select id="fGuests" required>
+              <option value="">Select</option>
+              <option>2 guests</option><option>3 guests</option><option>4 guests</option>
+              <option>5 guests</option><option>6 guests</option><option>7+ / Party</option>
+            </select>
+          </div>
+          <div class="field"><label for="fName">Name</label><input type="text" id="fName" placeholder="Your name" required /></div>
+        </div>
+        <div class="field"><label for="fPhone">Phone</label><input type="tel" id="fPhone" placeholder="+91 …" required /></div>
+        <button type="submit" class="btn btn-accent btn-lg btn-full">Reserve a Table</button>
+        <p class="form-note" id="formNote">No advance needed · Free cancellation up to 3 hrs before.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ VISIT / LOCATION ============ -->
+  <section class="section visit" id="visit">
+    <div class="container visit-grid">
+      <div>
+        <p class="eyebrow reveal">Visit Us</p>
+        <h2 class="reveal">On G.T. Road,<br>hard to leave.</h2>
+        <div class="visit-rows reveal">
+          <div><label>Address</label><p data-site="address">14 G.T. Road, Model Town,<br>Panipat, Haryana 132103</p></div>
+          <div><label>Hours</label><p>Tue – Sun · 11AM — 11PM<br><span class="muted">Monday · oven rests</span></p></div>
+          <div><label>Contact</label><p><a href="tel:+911802654321" data-site="phone">+91 180 265 4321</a><br><a href="mailto:hello@emberandoak.in">hello@emberandoak.in</a></p></div>
+        </div>
+        <div class="visit-ctas reveal">
+          <a class="btn btn-dark" href="https://www.google.com/maps?q=G.T.+Road+Model+Town+Panipat" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="btn btn-ghost-dark" href="https://instagram.com" target="_blank" rel="noopener" data-site="instagram">Instagram</a>
+        </div>
+      </div>
+      <div class="visit-map reveal">
+        <iframe title="Map — Ember and Oak, Panipat" src="https://www.google.com/maps?q=Model%20Town%20Panipat%20Haryana&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="visit-map-card">
+          <strong>Ember & Oak</strong>
+          <span>2 min from Panipat Junction · Parking behind</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (component: footer) ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="wordmark-text light">Ember <em>&</em> Oak</span>
+      <p>A wood-fired, seasonal kitchen in Panipat. Come hungry, leave slow.</p>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="text-link light" data-site="instagram">@emberandoak →</a>
+    </div>
+    <div class="footer-col">
+      <label>Explore</label>
+      <a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a>
+    </div>
+    <div class="footer-col">
+      <label>Visit</label>
+      <p data-site="address">14 G.T. Road, Model Town, Panipat 132103</p>
+      <p>Tue – Sun · 11AM — 11PM</p>
+      <a href="tel:+911802654321" data-site="phone">+91 180 265 4321</a>
+    </div>
+    <div class="footer-col">
+      <label>Reserve</label>
+      <a href="#reserve" class="btn btn-accent btn-sm">Reserve a Table</a>
+      <p class="muted">hello@emberandoak.in</p>
+    </div>
+  </div>
+  <div class="container footer-base">
+    <span>© 2026 Ember & Oak · Panipat</span>
+    <span>Crafted with fire & patience</span>
+  </div>
+</footer>
+
+<!-- Sticky mobile reserve -->
+<a href="#reserve" class="sticky-reserve">Reserve a Table <span>· Open till 11PM</span></a>
+
+<!-- ============ FULL MENU POPUP (component: menu-modal) ============ -->
+<div class="overlay" id="menuModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="menuModalTitle">
+  <div class="modal modal-menu">
+    <div class="modal-top">
+      <div>
+        <p class="eyebrow">Full Menu · Winter</p>
+        <h2 id="menuModalTitle">Eat with the season.</h2>
+        <p class="modal-sub">Wood-fired · Changes monthly · Veg & Jain always available</p>
+      </div>
+      <button type="button" class="modal-close" data-close aria-label="Close menu">✕</button>
+    </div>
+    <div class="menu-tabs" id="menuTabs" role="tablist"><!-- rendered by site.js --></div>
+    <div class="modal-list" id="fullMenuList"><!-- rendered by site.js --></div>
+    <div class="modal-foot">
+      <p>Prices inclusive of taxes · Please tell us about allergies — the kitchen will adapt.</p>
+      <div class="modal-foot-actions">
+        <button type="button" class="btn btn-ghost-dark" data-close>Keep Exploring</button>
+        <button type="button" class="btn btn-accent" data-goto-reserve>Reserve a Table</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STORY POPUP (component: story-modal) ============ -->
+<div class="overlay" id="storyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="storyModalTitle">
+  <div class="modal modal-story">
+    <button type="button" class="modal-close modal-close-float" data-close aria-label="Close story">✕</button>
+    <div class="story-modal-grid">
+      <div class="story-modal-media">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1000&auto=format&fit=crop" alt="Dining room at Ember and Oak" loading="lazy" />
+        <span>Est. 2018 · Panipat</span>
+      </div>
+      <div class="story-modal-copy">
+        <p class="eyebrow">Our Story · In Full</p>
+        <h2 id="storyModalTitle">Made with <em>intention.</em></h2>
+        <p>Ember &amp; Oak began in 2018 with a secondhand oven and eight tables. Chef Arjun Mehta — raised in Panipat, trained in Delhi and Copenhagen — wanted a room that treated dinner as an evening, not a transaction.</p>
+        <p>Every morning, vegetables arrive from five family farms within 60&nbsp;km. Bread is baked at noon. Stocks simmer all day. The oak oven is lit at 4&nbsp;PM and never rushed. There are 85 seats, low light, and staff who know when to appear — and when to disappear.</p>
+        <ul class="story-modal-facts">
+          <li><strong>5</strong><span>family farms</span></li>
+          <li><strong>72-hr</strong><span>dough ferment</span></li>
+          <li><strong>8-hr</strong><span>slow cooks</span></li>
+        </ul>
+        <div class="modal-foot-actions">
+          <button type="button" class="btn btn-ghost-dark" data-close>Back to Site</button>
+          <button type="button" class="btn btn-accent" data-goto-reserve>Dine With Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ GALLERY LIGHTBOX ============ -->
+<div class="overlay overlay-dark" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <figure class="lightbox-fig">
+    <button type="button" class="modal-close modal-close-light" data-close aria-label="Close photo">✕</button>
+    <img id="lightboxImg" src="" alt="" />
+    <figcaption id="lightboxCap"></figcaption>
+  </figure>
+</div>
+
+<script src="site.js"></script>
+</body>
+</html>
